@@ -4,7 +4,18 @@ html, body {
 
 }
 
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr ;
+    grid-template-rows: 0.1fr 0.4fr 1fr 1fr 0.3fr 1fr;
+}
+
 /* This is the navigation styling  */
+
+.navigation {
+    grid-column: span 6;
+}
+
 
 header {
     background-color: #262626;
@@ -83,8 +94,7 @@ a {
     .nav-menu {
         position: fixed;
         left: -120%; /*to move navigation out of the view*/
-        top: 70px; /*so navigation drops down from the top*/
-        gap: 0;
+        top: 70px; 
         flex-direction: column; /* links in the hamburger menu will appear in a column*/ 
         background-color: #262626;
         width: 100%;
@@ -103,3 +113,93 @@ a {
     }
 }
 
+/* This is the banner styling  */
+
+.banner {
+    display: grid;
+    grid-column: span 6;
+    justify-content: flex-start;
+
+    align-items: center;
+    padding-left: 20px;
+    background-image: url(https://www.celestica.com/uploadedImages/Blog/Blog/DigitalHealthTechTouchScreen.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+
+}
+
+.banner-content{
+    border-top: solid 5px;
+    border-left: solid 5px;
+    border-radius: 7px;
+    background-color: rgba(60, 65, 94, 0.5);
+    filter: blur(1px);
+    -webkit-filter: blur(0.5px);
+       
+}
+
+.banner-text {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+
+
+/* <!-- This is the main section of the page --> */
+
+.main-section {
+    display: grid;
+    grid-column: span 3;
+}
+
+.main-content1 {
+    background-color: firebrick;
+    
+}
+
+.main-content2 {
+    background-color: slateblue;
+}
+
+
+/* <!-- This is the contact section of the page --> */
+
+.contact-section {
+    grid-column: span 6;
+}
+
+.contact-content {
+
+
+}
+
+
+
+/* <!-- This is the form section of the page --> */
+
+.form-section {
+
+    grid-column: span 6;
+    background-color: rgb(255, 240, 30);
+
+}
+
+
+.form-content {
+
+
+}
+/* This is the footer styling  */
+
+.foot-section {
+    grid-column: span 6;
+    background-color: rgb(30, 255, 105);
+}
+
+
+footer {
+    
+}
