@@ -22,6 +22,7 @@ html, body {
 
 header {
     background-color: #262626;
+    border-radius: 5px;
 }
 
 li {
@@ -95,11 +96,12 @@ a {
     }
 
     .nav-menu {
-        position: fixed;
+        position: absolute;
+        z-index: 1;
         left: -120%; /*to move navigation out of the view*/
         top: 70px; 
         flex-direction: column; /* links in the hamburger menu will appear in a column*/ 
-        background-color: #262626;
+        background-color: rgba(38, 38, 38, 0.9);
         width: 100%;
         text-align: center;
         transition: 0.3s;
@@ -127,16 +129,13 @@ a {
     background-color: #262626;
     margin: 1em 0;
     color: honeydew;
+    border-radius: 5px;
 }
 
 .banner-content{
     border-top: solid 3px;
-    border-left: solid 5px;
-    
     border-radius: 7px;
-    background-color: rgba(60, 65, 94, 0.5);
-    filter: blur(1px);
-    -webkit-filter: blur(0.5px);
+    background-color: rgba(0, 0, 0, 0.2);
        
 }
 
@@ -154,14 +153,31 @@ a {
 .main-section {
     display: grid;
     grid-column-start: span 6;
-    background-image: url(https://www.celestica.com/uploadedImages/Blog/Blog/DigitalHealthTechTouchScreen.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    filter: blur(2px);
-    -webkit-filter: blur(0.5px);
+    border-radius: 5px;
+    animation-name: bgdisplay;
+    animation-duration: 10s;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
     
 }
+
+@keyframes bgdisplay {
+    0% {
+        background-image: url('https://www.celestica.com/uploadedImages/Blog/Blog/DigitalHealthTechTouchScreen.jpg');
+      }
+      50% {
+        background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8ANvqxZR83U_dF8DBb0fdfGxq1isSlxNLKQ&usqp=CAU');
+      }
+      100% {
+        background-image: url('https://i0.wp.com/regtechafrica.com/wp-content/uploads/2020/06/Health-tech.jpg');
+      }
+  }
+
+
 
 .main-content {
     display: flex;
@@ -179,7 +195,32 @@ a {
     padding: 20px;
     filter: blur(2px);
     -webkit-filter: blur(0.5px);
+    /* position: relative;
+    animation: mymove 5s infinite; */
 }
+
+/* @keyframes mymove {
+    from {left: -700px;}
+    to {right: 0px;}
+  } */
+
+  @media (max-width:768px) {
+      .main-content {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 0;
+      }
+
+      .main-content2 {
+          text-align: center;
+          width: 80vw;
+      }
+  }
+
+.main-content2:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+   }
 
 .button {
     background-color: rgba(0, 0, 0, 1);
@@ -196,7 +237,7 @@ a {
   }
 
   .button:hover {
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(27, 26, 26, 1);
   }
 
 
@@ -206,8 +247,9 @@ a {
     display: grid;
     justify-content: center;
     grid-column-start: span 6;
-    background-color: rgb(30, 142, 253);
+    background-color: rgba(199, 10, 10, 0.993);
     margin: 1em 0;
+    border-radius: 5px;
     
 }
 
