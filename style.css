@@ -1,19 +1,22 @@
 html, body {
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
 
 }
 
 .container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr ;
-    grid-template-rows: 0.1fr 0.4fr 1fr 1fr 0.3fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.1fr 0.4fr 1fr 0.2fr 1fr 0.2fr;
+
+    /* grid-template-columns: repeat(auto-fill, 1fr); */
 }
 
 /* This is the navigation styling  */
 
 .navigation {
-    grid-column: span 6;
+    grid-column-start: span 6;
 }
 
 
@@ -117,22 +120,19 @@ a {
 
 .banner {
     display: grid;
-    grid-column: span 6;
+    grid-column-start: span 6;
     justify-content: flex-start;
-
     align-items: center;
     padding-left: 20px;
-    background-image: url(https://www.celestica.com/uploadedImages/Blog/Blog/DigitalHealthTechTouchScreen.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    
-
+    background-color: #262626;
+    margin: 1em 0;
+    color: honeydew;
 }
 
 .banner-content{
-    border-top: solid 5px;
+    border-top: solid 3px;
     border-left: solid 5px;
+    
     border-radius: 7px;
     background-color: rgba(60, 65, 94, 0.5);
     filter: blur(1px);
@@ -141,6 +141,7 @@ a {
 }
 
 .banner-text {
+    color: rgb(255, 249, 249);
     padding-left: 10px;
     padding-right: 10px;
 }
@@ -152,46 +153,108 @@ a {
 
 .main-section {
     display: grid;
-    grid-column: span 3;
+    grid-column-start: span 6;
+    background-image: url(https://www.celestica.com/uploadedImages/Blog/Blog/DigitalHealthTechTouchScreen.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    filter: blur(2px);
+    -webkit-filter: blur(0.5px);
+    
 }
 
-.main-content1 {
-    background-color: firebrick;
+.main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 20px;
+    color: honeydew;
     
 }
 
 .main-content2 {
-    background-color: slateblue;
+    background-color: rgba(38, 38, 38, 0.5);
+    border-radius: 20px;
+    padding: 20px;
+    filter: blur(2px);
+    -webkit-filter: blur(0.5px);
 }
+
+.button {
+    background-color: rgba(0, 0, 0, 1);
+    border-radius: 10px;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+
+  .button:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+  }
 
 
 /* <!-- This is the contact section of the page --> */
 
 .contact-section {
-    grid-column: span 6;
+    display: grid;
+    justify-content: center;
+    grid-column-start: span 6;
+    background-color: rgb(30, 142, 253);
+    margin: 1em 0;
+    
 }
 
 .contact-content {
+    display: flex;
+    flex-direction: row;
+    padding-left: 2px;
+    text-align: start;
+}
 
-
+.contact-item {
+    border-left: solid white 5px;
+    padding: 0 5em;
+    font-size: 1.2em;
 }
 
 
 
 /* <!-- This is the form section of the page --> */
 
-.form-section {
+.form-cover {
+    grid-column-start: span 6;
 
-    grid-column: span 6;
-    background-color: rgb(255, 240, 30);
+}
+
+.inside-form {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.form-content1 {
+    background-color: rgb(216, 183, 38);
+
+}
+
+.form-content2 {
+    background-color: rgb(209, 31, 0);
 
 }
 
 
-.form-content {
-
+.form-text {
+    background-color: firebrick;
 
 }
+
 /* This is the footer styling  */
 
 .foot-section {
