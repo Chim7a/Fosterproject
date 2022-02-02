@@ -8,7 +8,7 @@ html, body {
 .container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 0.1fr 0.4fr 1fr 0.2fr 1fr 0.2fr;
+    grid-template-rows: 0.1fr 0.4fr 1fr 0.5fr 1fr 0.2fr;
 
     /* grid-template-columns: repeat(auto-fill, 1fr); */
 }
@@ -244,26 +244,35 @@ a {
 /* <!-- This is the contact section of the page --> */
 
 .contact-section {
-    display: grid;
-    justify-content: center;
-    grid-column-start: span 6;
-    background-color: rgba(199, 10, 10, 0.993);
-    margin: 1em 0;
-    border-radius: 5px;
-    
-}
-
-.contact-content {
     display: flex;
-    flex-direction: row;
-    padding-left: 2px;
-    text-align: start;
+    justify-content: space-around;
+    grid-column-start: span 6;
+    background-color: rgba(27, 26, 26, 1);
+    padding: 0 2em;
+    border-radius: 5px;
+    color: white;
+    align-items: center;
+    margin: 1em 0;
+    
 }
 
 .contact-item {
     border-left: solid white 5px;
-    padding: 0 5em;
-    font-size: 1.2em;
+    padding: 0 2em;
+    font-size: 1em;
+}
+
+@media (max-width:768px) {
+   .contact-section {
+        display: grid;
+        align-items: center;
+        margin: 20px 0;
+    }
+
+    .contact-item {
+        margin: 20px;
+        font-size: 1.2em;
+    }
 }
 
 
